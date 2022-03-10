@@ -1,38 +1,39 @@
 h1 {
-  color: red;
-  font: size 20px;
+     color: red;
+     font: size 20px;
 }
 
 h4 :hover {
-  color: blue;
-  font: size 20px;
+     color: blue;
+     font: size 20px;
 }
 
-/## html {
+/* html {
   background-color: gold;
-}
-
-<لتفير الخلفية للكل Ul {
-  background-color: darkred;
-}
+}*/
 
 .my-li {
   color: red;
   font: size 20px;
 }
 
-لتعديل جميع الصور <!... img {
-  width: 100px !important;
-}
-
-لتعديل صورة واحدة.my-img {
-  width: 500px;
-}
-
-لتعديل خلفيه محددة .my-color {
-  background-color: rgb(233, 7, 7);
-}
-
 .my-em {
-  font-size: 2em;
+     font-size: 2em;
+}
+
+
+footer nav ul li {
+    display: inline;
+}
+
+table {
+    border: 2px solid #253;
+    width: 200px;
+    text-align: center;
+    border-collapse:collapse;
+}
+
+tr,td,th {
+   border: 2px solid rgb(233, 7, 7);
+   padding: 10px;
 }
