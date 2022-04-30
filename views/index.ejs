@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" class="allpag">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+
+  <link rel="stylesheet" href="script.js" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#shaw-button").click(function () {
+        $("#shaw-All").toggle();
+      });
+    });
+  </script>
+
+</head>
+
+<body id="body-page">
+
+  <!-- header -->
+
+  <%- include('./partials/header'); %>
+
+    <form id="form-timer">
+
+    </form>
+    <section>
+      <h1 class="h1"><strong>latest Recipe</strong></h1>
+      <h2 class="topic"><strong>Cook it with potatoes</strong></h2>
+
+
+      <figure>
+        <img width="400" class="my-img" src="images/9.jpg" />
+      </figure>
+
+      <div class="summary1">
+        <summary>
+          <h3 id="line60"><strong>Barley Soup</strong></h3>
+        </summary>
+        <p>Our Vegetable Barley Soup recipe makes a homey starter to go with weekend dinner.<br> With a variety of
+          vegetables,
+          herbs and a pesto finish, you'll have flavour and freshness in a bowl!
+        </p>
+      </div>
+
+      <ol>
+        <li>In a large saucepan, heat oil over medium high heat. Cook onions, carrots and celery just until tender.
+          Add
+          garlic and cook one minute more.</li>
+        <li>Stir in broth, parsley, thyme, bay leaves, barley, tomatoes, and potatoes. Bring to a boil, reduce
+          heat to maintain a simmer, cover and cook until barley and potatoes are tender, about 15 – 20 minutes.</li>
+        <li>Add zucchini and green beans and cook 5 minutes more.</li>
+        <li>Serve in bowls with a spoonful of pesto, a drizzle of olive oil and grated Parmesan.</li>
+        <li>It is best eaten cold</li>
+
+        <ol>
+
+          <br />
+
+          <figure>
+            <img width="300" src="images/8.jpg" />
+            <figcaption></figcaption>
+          </figure>
+
+          <details>
+            <summary>
+              </h3><strong> Hearty Bolognese Soup </strong></h3>
+            </summary>
+            <ul>
+              <li>Heat oil in large saucepan over medium to high heat. Cook ground beef, breaking up with spoon, 6
+                minutes
+                or until no longer pink; drain off fat. Reduce heat to medium.</li>
+              <li>
+                Add onions, carrots, garlic, Italian herb seasoning and pepper, optional; cook, stirring 5 minutes
+                until
+                tender.
+              </li>
+              <li>Stir in broth, soup, water, vinegar and pasta. Cook, stirring occasionally, until boiling. Simmer,
+                covered, stirring occasionally over medium to low heat for 6 minutes until pasta is tender.</li>
+
+            </ul>
+          </details>
+    </section>
+    <br />
+    <hr />
+    <section>
+      <h3><strong>Customer Reviews</strong></h3>
+    </section>
+
+
+    <section>
+      <h3>Create New Reviews</h3>
+
+      <form action="/index" method="POST">
+
+        <label for="name">Customer Name</label>
+        <input name="name" class="nameCustomer" type="name" placeholder="Name" required />
+
+        <label for="comment">Comment</label>
+        <textarea id="textareaReviews" name="comment" placeholder="Your Comment" required></textarea>
+
+        <button class="create">Create</button>
+
+      </form>
+    </section>
+    <button id="shaw-button" class="create">All</button>
+
+
+
+    <!-- item = all elements inside array -->
+
+
+    <div id="shaw-All">
+      <div class="allReviews">
+        <%arrReviews.forEach(item=> { %>
+
+          <article class="article-All-Reviews">
+            <h3><u>
+                <%= item.name %>
+              </u></h3>
+            <p>
+              <%= item.comment %>
+            </p>
+          </article>
+          <% }) %>
+      </div>
+    </div>
+
+    <div class="container-Donation" style="width: 18rem;">
+      <img style="border-radius: 50px;" width="200px" src="images/Donation.jpg" class="card-img-top" alt="...">
+      <div>
+        <h3>SUPPORT US</h3>
+        <p>Support the channel to continue.</p>
+        <a class="Donation-buy" href="#" class="Go">Donation</a>
+
+      </div>
+    </div>
+
+    <form class="container-card">
+      <br>
+      <div class="Payment">
+
+        <h3>Payment</h3>
+        <label for="cname">Name on Card</label>
+        <br>
+        <input type="text" class="Payment" name="card name" placeholder="joy Amir" required />
+
+        <label for="ccnum">Credit card number</label>
+        <input type="text" class="Payment" name="card number" placeholder="0000-2222-3333-4444" required />
+
+        <label for="exp">Exp Month-Year</label>
+        <input type="text" class="Payment" name="exp" placeholder="01-22" required />
+
+        <label for="cvv">CVV</label>
+        <input type="text" class="Payment" name="cvv" placeholder="123" required />
+
+        <label for="cvv">Amount</label>
+        <input type="text" class="Payment" name="Amount" placeholder="" required />
+
+        <label for="email">Your Email</label>
+        <input id=" email" class="Payment" type="Email" placeholder="Example@gmail.com" />
+
+        <button class="checkout">Continue to checkout</button>
+        <br>
+        <a class="Back" href="index">Back</a>
+      </div>
+    </form>
+
+    <form id="buyDone">
+      <h4>Done<br />Thanks</h4>
+    </form>
+</body>
+
+
+
+<!-- footer -->
+<%- include(`./partials/footer`); %>
+
+
+</html>

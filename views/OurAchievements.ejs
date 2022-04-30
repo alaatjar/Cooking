@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" class="allpag">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Achievements</title>
+  <link rel="stylesheet" href="script.js" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+
+<body id="body-page">
+  <%- include('./partials/header'); %>
+
+    <table class="table-achievements">
+      <caption id="achievements-page">
+        Our achievements
+      </caption>
+      <tr>
+        <td>Chicken</td>
+        <td>Beef</td>
+      </tr>
+      <tr>
+        <td>
+          Chicken Orzo
+          <br />
+          <a target="_blank" href="https://www.cookwithcampbells.ca/recipe/chicken-orzo/">
+            <img width="250px" src="images/6.jpg" /></a>
+        </td>
+        <td>
+          Beef Sandwich Cheesy Roasted
+          <br />
+          <a target="_blank"
+            href="https://www.cookwithcampbells.ca/recipe/cheesy-roasted-red-pepper-and-beef-sandwich/">
+            <img width="250px" src="images/5.jpg" /></a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Easy Chicken & Mushroom Risotto
+          <br />
+          <a target="_blank" href="https://www.cookwithcampbells.ca/recipe/chicken-mushroom-risotto/">
+            <img width="250px" src="images/7.jpg" /></a>
+        </td>
+        <td>
+          Slow Cooker Beef Stew
+          <a target="_blank" href="https://www.cookwithcampbells.ca/recipe/slow-cooker-beef-stew/">
+            <img width="250px" src="images/4.jpg" /></a>
+        </td>
+      </tr>
+    </table>
+
+    <video controls src="images//Slow Cooker Beef Stew - Easy Peasy Great Dinner!.mp4"></video>
+    <br />
+
+    <h2 id="Special">Special Recipes (For Sale)</h2>
+    <section class="container-buy">
+      <div style="width: 15rem">
+        <img style="border-radius: 50px" width="200px" src="images/Diabetics.png" class="card-img-top" alt="..." />
+        <div>
+          <h3 class="title-buy">Diabetics</h3>
+          <p class="title-buy">To buy the recipe<br />click here</p>
+          <a class="Donation-buy" href="#" class="Go">buy $20</a>
+        </div>
+      </div>
+
+      <div style="width: 15rem">
+        <img style="border-radius: 50px" width="200px" src="images/keto.png" class="card-img-top" alt="..." />
+        <div>
+          <h3 class="title-buy">Keto Diet</h3>
+          <p class="title-buy">To buy the recipe<br />click here</p>
+          <a class="Donation-buy" href="#" class="Go">buy $15</a>
+
+          <br />
+          <nav>
+            <h4><a class="help" href="./contactUs.html">Help</a></h4>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <div class="share">
+      <h3 class="share">You can share your recipes on the site.</h3>
+
+      <a class="share-Go" href="AddRecipe.html">Add Recipe</a>
+    </div>
+
+    <form class="container-card">
+      <br>
+      <div class="Payment">
+        <h3>Payment</h3>
+        <label for="cname">Name on Card</label>
+        <br>
+        <input type="text" class="Payment" name="card name" placeholder="joy Amir" required />
+
+        <label for="ccnum">Credit card number</label>
+        <input type="text" class="Payment" name="card number" placeholder="0000-2222-3333-4444" required/>
+
+        <label for="exp">Exp Month-Year</label>
+        <input type="text" class="Payment" name="exp" placeholder="01-22" required />
+
+        <label for="cvv">CVV</label>
+        <input type="text" class="Payment" name="cvv" placeholder="123" required />
+
+        <label for="cvv">Amount</label>
+        <input type="text" class="Payment" name="Amount" placeholder="" required />
+
+        <label for="email">Your Email</label>
+        <input id=" email" class="Payment" type="Email" placeholder="Example@gmail.com" required/>
+
+        <button class="checkout">Continue to checkout</button>
+        <br>
+        <a class="Back" href="OurAchievements.html">Back</a>
+      </div>
+    </form>
+
+    <form id="buyDone">
+      <h4>Done<br />Thanks</h4>
+    </form>
+</body>
+
+<!-- footer -->
+<%- include(`./partials/footer`); %>
+
+</html>
